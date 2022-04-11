@@ -1,0 +1,22 @@
+/* components/published/published.wxss */
+.published{
+  min-height: 100%;
+}
+.cu-form-group textarea {
+  height: 10rem;
+}
+
+.rules{
+  margin: 40rpx;
+  padding: 50rpx 30rpx;
+  border-radius: 15rpx;
+  border:3rpx solid #aaa;
+}
+.rules .title{
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.iconfont{
+  margin-right: 5rpx;
+  font-size: 30rpx;
+}

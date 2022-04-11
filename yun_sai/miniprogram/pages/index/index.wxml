@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="zong  bg-white">
+	<nav />
+	<view class="component  bg-white">
+		<home isHidden="{{PageFlag !=='home'}}" />
+		<published isHidden="{{PageFlag !=='published'}}" />
+		<mine isHidden="{{PageFlag !=='mine'}}" />
+	</view>
+	<view class="cu-bar tabbar bg-gradual-pink shadow foot">
+		<view class="action {{PageFlag == 'home'?'text-black':'text-gray'}}" bindtap="NavChange" data-flag="home">
+			<view class="iconfont icon-yixianshi-"></view> 首页
+		</view>
+		<view class="action add-action {{PageFlag == 'fabu'?'text-black':'text-gray'}}" bindtap="NavChange" data-flag="published">
+			<view class="cu-btn cuIcon-add iconfont icon-yixianshi-1 bg-gradual-red"></view>
+			发布
+		</view>
+		<view class="action {{PageFlag == 'mine'?'text-black':'text-gray'}}" bindtap="NavChange" data-flag="mine">
+			<view class="iconfont icon-yixianshi_huaban"></view>
+			我的
+		</view>
+	</view>
+</view>
+<!-- <view class="cu-chat">
+	<view class="cu-item self">
+		<view class="main">
+			<view class="content bg-green shadow">
+				<text>喵喵喵！喵喵喵！喵喵喵！喵喵！喵喵！！喵！喵喵喵！</text>
+			</view>
+		</view>
+		<view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view>
+		<view class="date">2018年3月23日 13:23</view>
+	</view>
+	<view class="cu-info round">对方撤回一条消息!</view>
+	<view class="cu-item">
+		<view class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big143004.jpg);"></view>
+		<view class="main">
+			<view class="content shadow">
+				<text>喵喵喵！喵喵喵！</text>
+			</view>
+		</view>
+		<view class="date "> 13:23</view>
+	</view>
+</view> -->

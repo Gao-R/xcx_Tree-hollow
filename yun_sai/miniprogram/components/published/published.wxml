@@ -1,0 +1,51 @@
+<!--components/published/published.wxml-->
+<view class="bg-white published" hidden="{{isHidden}}">
+	<form bindsubmit="release">
+		<view class="cu-form-group padding-top">
+			<textarea name='content' maxlength="100" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="把烦心事都写上来吧!" auto-focus='{{true}}' auto-height="{{true}}"></textarea>
+		</view>
+		<view class="padding-xl">
+			<button id='addArt' form-type="submit" class="cu-btn block bg-gray margin-tb-sm lg animation-shake">
+				<text class="iconfont icon-fabuxianxing text-mauve"></text> 发布</button>
+		</view>
+	</form>
+	<view class="rules">
+		<view class="cu-form-group">
+			<switch class="orange radius sm" checked="{{rules}}" bindtap="changeRules"></switch>
+		</view>
+		<text class="title">发布功能使用规则</text>
+		<text>
+
+            1您特此保证，您发布的任何信息，不存在以下任何一种违反法律法规规定的情形
+
+            1.1反对宪法所确定的基本原则;
+
+            1.2危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一;
+
+            1.3损害国家荣营和利益;
+
+            1.4煽动民族仇恨、民族歧视、破坏民族团结;1.5破坏国家宗教政策，宣扬邪教和封建迷信;1.6散布谣言，扰乱社会秩序，破坏社会稳定;1.7宣扬淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪;
+
+            1.8煽动非法集会、结社、游行、示威、聚众扰乱社会秩序;
+
+            1.9诽谤他人，泄露他人隐私，侵害他人合法权益;
+
+            1.10任何违反《中华人民共和国广告法》(包括但不限于使用极限用语等)及相关规定;
+
+            1.11含有法律、行政法规、政策禁止的其他内容的信息。
+
+            2您特此保证，您发布的任何信息，不存在以下任一不友善的行为:
+
+            2.1轻蔑:贬低、轻视他人及其项目或劳动成果;
+
+
+            2.2诽谤:捏造、散布虚假事实，损害他人名营;2.3嘲讽:以比喻、夸张、侮辱性的手法对他人或其行为进行揭露或描述;
+
+            2.4挑衅:以不友好的方式激怒他人，意图使对方对自己的言论作出回应，蓄意制造事端;
+
+            2.5羞辱:贬低他人的能力、行为、生理或身份特征，让对方难堪;
+
+            2.6谩骂:以不文明的语言对他人进行负面评价;2.7歧视:针对他人的民族、种族、宗教、性取向、性别、年龄、地域、生理特征等身份或者归类的攻击;
+    </text>
+	</view>
+</view>

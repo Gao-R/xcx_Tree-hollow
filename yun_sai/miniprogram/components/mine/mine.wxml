@@ -1,0 +1,55 @@
+<!--components/mine/mine.wxml-->
+<wxs module="utils" src="../../static/tools/Date.wxs" />
+
+<view class="mine" hidden="{{isHidden}}">
+	<view class="bg-img padding-tb-xl" style="background-image: url('https://img.tuguaishou.com/ips_templ_preview/5a/53/3d/lg_2967135_1586866626_5e95a9c2c4102.jpg!w768?auth_key=2231424000-0-0-874c982d496b51b3a8feb65e1475aecc&v=1554825701');background-size: cover;">
+		<view class="top">
+			<view class="head">
+				<image class="headImg animation-fade" src="{{head_img}}"></image>
+			</view>
+			<view class="names">
+				<input class="name" maxlength="10" placeholder="点击输入名称" value="{{head_name}}" bindblur="changeName"></input>
+				<view class="tit" bindtap="changeHeadImg">切换头像</view>
+			</view>
+		</view>
+	</view>
+	<!-- 发布文章列表 -->
+	<view class="cu-list menu sm-border">
+		<view class="cu-item {{menuArrow?'arrow':''}}">
+			<button class="cu-btn content animation-slide-right" open-type="contact">
+				<text class="cuIcon-btn text-purple iconfont icon-kefu"></text>
+				<text class="text-grey">客服</text>
+			</button>
+			<button class="cu-btn content animation-slide-right" open-type="feedback">
+				<text class="cuIcon-btn text-mauve iconfont icon-fankui"></text>
+				<text class="text-grey">反馈</text>
+			</button>
+		</view>
+	</view>
+	<view class="cu-list menu-avatar animation-slide-bottom" style="animation-delay: 0.5s;">
+		<block wx:for="{{atrList}}" wx:key="id">
+			<view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+				<view class="cu-avatar round lg" style="background-image:url({{item.head_img}}"></view>
+				<view class="content">
+					<view class="name text-grey"><view>{{item.name}}</view> <text class="date text-grey text-xs">{{utils.date(item.date_time)}}</text></view>
+					<view class="text-gray text-sm text-cuts">
+						{{item.content}}
+					</view>
+				</view>
+				<view class="move">
+					<view class="bg-grey" wx:if="{{adm}}" bindtap="setTop" data-id="{{item._id}}" data-status="{{item.top === true?false:true}}">{{item.top === true?'取消置顶':'置顶'}}</view>
+					<view class="bg-red" bindtap="delete" data-id="{{item._id}}">Del</view>
+				</view>
+			</view>
+		</block>
+		<view class="mord" bindtap="getList" hidden="{{}}">
+			<text class="iconfont icon-{{flag == true?'jiazai':'jiazaizhong'}}"></text>
+			<text class="more-text">more</text>
+		</view>
+	</view>
+	<view class="refresh">
+		<text class="iconfont icon--"  bindtap="refresh"></text>
+		<text class="iconfont icon-fanhuidingbu" bindtap="top"></text>
+	</view>
+
+</view>

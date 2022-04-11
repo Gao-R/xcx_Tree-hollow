@@ -1,0 +1,17 @@
+var utils = {
+  date:function(time) {
+    var date = getDate(time)
+    var y = date.getFullYear()
+    var m = date.getMonth() + 1
+    var d = date.getDate()
+    var hh = date.getHours()
+    var mm = date.getMinutes()
+    if (m < 10) {
+      m = "0" + m
+    }
+    return y + "/" + m + "/" + d + "-" +hh + "：" + mm
+  }
+}
+module.exports = {
+  date: utils.date
+}

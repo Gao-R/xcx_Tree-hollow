@@ -1,0 +1,32 @@
+<!--components/home/home.wxml-->
+<wxs module="utils" src="../../static/tools/Date.wxs" />
+<view class="actList" hidden="{{isHidden}}">
+	<block wx:for="{{artcleList}}" wx:key="*this">
+		<view class="act animation-slide-right">
+			<view class="act-top">
+				<view class="act-le">
+					<image class="act-img" src="{{item.head_img}}"></image>
+				</view>
+				<view class="act-ri">
+					<view class="act-nameDate">
+						<view class="act-name">{{item.name}}</view>
+						<view class="act-date">{{utils.date(item.date_time)}}</view>
+					</view>
+				</view>
+				 <view wx:if="{{item.top}}" class="top"><text class="min_iconfont iconfont icon-huo"></text> TOP</view>
+			</view>
+			<view class="act-text">
+				<view class="act-info">{{item.content}}</view>
+			</view>
+		</view>
+	</block>
+	<view class="mord" bindtap="getList">
+		<text class="iconfont icon-{{flag == true?'jiazai':'jiazaizhong'}}"></text>
+		<text class="more-text">more</text>
+	</view>
+	<view class="refresh">
+	<text class="iconfont icon--"  bindtap="refresh"></text>
+	<text class="iconfont icon-fanhuidingbu" bindtap="top"></text>
+	</view>
+
+</view>

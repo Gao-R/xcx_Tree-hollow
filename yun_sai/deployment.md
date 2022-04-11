@@ -1,0 +1,3 @@
+当您下拉完此代码后，可以使用微信开发者工具导入此项目（appId须要自行申请）。
+
+请在数据库内添加artcle和administrator两个数据库，其中artcle数据库是存放文章内容，administrator则是存放管理员信息，首次创建请添加openid字段，字段值为管理员的openid。

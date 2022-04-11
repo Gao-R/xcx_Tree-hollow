@@ -1,0 +1,95 @@
+/* components/home/home.wxss */
+.actList {
+  background-color: #fff;
+}
+
+.act {
+  padding: 20rpx 5%;
+  margin-bottom: 20rpx;
+}
+
+.act .act-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.act .act-top .act-le {
+  flex: 2;
+}
+
+.act .act-top .act-le .act-img {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 10rpx;
+}
+
+.act .act-top .act-ri {
+  flex: 7;
+}
+
+.act-ri .act-nameDate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+.act-ri .act-nameDate .act-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #9c26b0;
+}
+
+.act-ri .act-nameDate .act-date {
+  font-size: 24rpx;
+  color: #bbb;
+}
+
+.act-text .act-info {
+  text-indent: 2rem;
+  margin-left: 1.5rem;
+  font-size: 28rpx;
+  color: #535a5e;
+}
+
+.act .top {
+  padding: 8rpx;
+  font-size: 20rpx;
+  color: #f37b1d;
+  /* border-radius: 10rpx;
+  border: 2rpx solid #000; */
+}
+.min_iconfont {
+  font-size: 30rpx;
+}
+
+.mord {
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mord .more-text {
+  margin-left: 20rpx;
+  font-size: 50rpx;
+}
+
+.refresh {
+  height: 100rpx;
+  width: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 10rpx;
+  bottom: 200rpx;
+  color: #9c26b0;
+}

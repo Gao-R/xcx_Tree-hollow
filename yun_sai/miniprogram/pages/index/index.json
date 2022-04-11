@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mine":"/components/mine/mine",
+    "nav":"/components/nav/nav",
+    "home":"/components/home/home",
+    "published":"/components/published/published"
+  }
+}
